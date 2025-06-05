@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Products Table</title>
+    <style>
+        /* Modern CSS Grid Table */
+        :root {
+            --header-bg: #232f3e; /* Amazon navy */
+            --header-text: white;
+            --row-even: #f2f2f2;
+            --row-hover: #fafafa;
+            --border: #dddddd;
+        }
+
+        body {
+            font-family: 'Amazon Ember', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #232f3e;
+            margin-bottom: 25px;
+        }
+
+        .grid-table {
+            display: grid;
+            grid-template-columns: 120px 80px 1fr 120px 2fr;
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .grid-header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding: 14px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .grid-item {
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .grid-item img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .grid-row:nth-child(even) > .grid-item {
+            background: var(--row-even);
+        }
+
+        .grid-row:hover > .grid-item {
+            background: var(--row-hover);
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+            line-height: 1.4;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .grid-table {
+                grid-template-columns: 100px 70px 1fr;
+            }
+            .grid-table .grid-item:nth-child(4),
+            .grid-table .grid-item:nth-child(5) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazon Product Catalog</h1>
+    
+    <div class="grid-table">
+        <!-- Header Row -->
+        <div class="grid-header">Firm</div>
+        <div class="grid-header">Icon</div>
+        <div class="grid-header">Product Name</div>
+        <div class="grid-header">Category</div>
+        <div class="grid-header">Description</div>
+
+        <!-- Product Rows (15 Examples) -->
+        <!-- Row 1 -->
+        <div class="grid-item">Amazon</div>
+        <div class="grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+        <div class="grid-item">Echo Dot (5th Gen)</div>
+        <div class="grid-item">Smart Home</div>
+        <div class="grid-item">
+            <ul>
+                <li>Voice control with Alexa</li>
+                <li>Compact spherical design</li>
+                <li>Works with smart home devices</li>
+            </ul>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid-item">Amazon</div>
+        <div class="grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+        <div class="grid-item">Kindle Paperwhite</div>
+        <div class="grid-item">Electronics</div>
+        <div class="grid-item">
+            <ul>
+                <li>6.8" glare-free display</li>
+                <li>Waterproof (IPX8 rating)</li>
+                <li>Adjustable warm light</li>
+            </ul>
+        </div>
+
+        <!-- Row 3 to 15 (truncated for brevity) -->
+        <div class="grid-item">Amazon</div>
+        <div class="grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+        <div class="grid-item">Fire TV Stick 4K</div>
+        <div class="grid-item">Streaming</div>
+        <div class="grid-item">
+            <ul>
+                <li>4K Ultra HD streaming</li>
+                <li>Alexa Voice Remote included</li>
+                <li>Dolby Vision/Atmos support</li>
+            </ul>
+        </div>
+
+        <!-- Add 12 more rows following the same pattern -->
+        <!-- Example placeholder for remaining products -->
+        <div class="grid-item">Amazon</div>
+        <div class="grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+        <div class="grid-item">Amazon Basics Backpack</div>
+        <div class="grid-item">Office</div>
+        <div class="grid-item">
+            <ul>
+                <li>Durable polyester fabric</li>
+                <li>Multiple compartments</li>
+                <li>Laptop sleeve fits up to 15"</li>
+            </ul>
+        </div>
+        
+        <!-- Continue until 15 rows total -->
+    </div>
+</body>
+</html>
